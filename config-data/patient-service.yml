@@ -10,4 +10,4 @@ spring:
       ddl-auto: update
 
 server:
-  port: 8010
+  port: ${PATIENT_SERVER_PORT}

@@ -1,12 +1,12 @@
 server:
-  port: 8000
+  port: ${CONFIG_SERVER_PORT}
 spring:
   cloud:
     config:
       server:
         git:
-          default-label: feature/patient-service
-          uri: https://github.com/anthonyZR11/medical-reservation-plaftorm.git
+          default-label: ${CONFIG_GIT_BRANCH}
+          uri: ${CONFIG_GIT_URI}
           search-paths: config-data
   application:
     name: config-server
