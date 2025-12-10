@@ -1,0 +1,8 @@
+spring:
+  datasource:
+    host: localhost
+    port: 3310
+    database: patient_db
+    username: patient
+    password: Secure@123
+    driver-class-name: com.mysql.cj.jdbc.Driver

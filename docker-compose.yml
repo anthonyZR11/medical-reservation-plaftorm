@@ -1,0 +1,15 @@
+services:
+  patient-db:
+    image: mysql:8
+    container_name: patient-db
+    environment:
+      MYSQL_ROOT_PASSWORD: StrongRootP@ss2025
+      MYSQL_DATABASE: patient_db
+      MYSQL_USER: patient          # Usuario para la app
+      MYSQL_PASSWORD: Secure@123     # Password del usuario
+    ports:
+      - "3310:3306"
+    volumes:
+      - patient_db_data:/var/lib/mysql
+volumes:
+  patient_db_data:

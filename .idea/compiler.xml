@@ -8,6 +8,15 @@
         <outputRelativeToContentRoot value="true" />
         <module name="config-server" />
       </profile>
+      <profile name="Annotation profile for patient-service" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.42/lombok-1.18.42.jar" />
+        </processorPath>
+        <module name="patient-service" />
+      </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="medical-reservation-platform" target="17" />
@@ -17,6 +26,7 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="config-server" options="-parameters" />
       <module name="medical-reservation-platform" options="-parameters" />
+      <module name="patient-service" options="-parameters" />
     </option>
   </component>
 </project>
