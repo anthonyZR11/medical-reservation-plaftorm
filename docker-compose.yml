@@ -1,4 +1,17 @@
 services:
+  auth-db:
+    image: mysql:8
+    container_name: auth-db
+    environment:
+      MYSQL_ROOT_PASSWORD: StrongRootP@ss2025
+      MYSQL_DATABASE: ${AUTH_DB_DATABASE}
+      MYSQL_USER: ${AUTH_DB_USERNAME}          # Usuario para la app
+      MYSQL_PASSWORD: ${AUTH_DB_PASSWORD}    # Password del usuario
+    ports:
+      - "${AUTH_SERVICE_PORT}:3306"
+    volumes:
+      - auth_db_data:/var/lib/mysql
+
   patient-db:
     image: mysql:8
     container_name: patient-db
@@ -13,3 +26,4 @@ services:
       - patient_db_data:/var/lib/mysql
 volumes:
   patient_db_data:
+  auth_db_data:
