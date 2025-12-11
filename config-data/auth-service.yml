@@ -1,0 +1,6 @@
+server:
+  port: ${AUTH_SERVICE_PORT}
+
+jwt:
+  secret: ${AUTH_SERVICE_JWT_SECRET}
+  expiration: ${AUTH_SERVICE_JWT_EXPIRATION}
